@@ -32,9 +32,9 @@ body {
   border-bottom: 1px solid #555555;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(5px);
 }
 
 
@@ -110,10 +110,11 @@ body {
 .menu-toggle {
   display: none;
   flex-direction: column;
-  height: 1.2em;
+  height: 1.4em;
   justify-content: space-between;
   position: relative;
   margin-left: 1.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .menu-toggle input {
@@ -129,8 +130,8 @@ body {
 
 .menu-toggle span {
   display: block;
-  width: 1.7em;
-  height: 0.2em;
+  width: 1.8em;
+  height: 0.18em;
   background-color: rgb(241, 227, 255);
   border-radius: 3px;
   transition: all 0.5s;
@@ -413,14 +414,14 @@ footer .credit a {
 
 
 /* Laptop */
-@media (max-width: 1366px) {
+@media only screen and (max-width: 1366px) {
   html {
     font-size: 75%;
   }
 }
 
 /* Tablet */
-@media (max-width: 758px) {
+@media only screen and (max-width: 758px) {
   html {
     font-size: 65%;
   }
@@ -458,6 +459,7 @@ footer .credit a {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.3);
   }
+
 
   .about .row {
     flex-wrap: wrap;
@@ -500,9 +502,8 @@ footer .credit a {
 }
 
 /* Mobile Phone */
-@media (max-width: 500px) {
 
-
+@media only screen and (max-width: 500px) {
   html {
     font-size: 55%;
   }
